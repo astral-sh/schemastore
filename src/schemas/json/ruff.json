@@ -736,12 +736,12 @@
         {
           "description": "Construct a map from module to its dependencies (i.e., the modules that it imports).",
           "type": "string",
-          "enum": ["Dependencies"]
+          "enum": ["dependencies"]
         },
         {
           "description": "Construct a map from module to its dependents (i.e., the modules that import it).",
           "type": "string",
-          "enum": ["Dependents"]
+          "enum": ["dependents"]
         }
       ]
     },
@@ -3479,6 +3479,8 @@
         "RUF06",
         "RUF060",
         "RUF061",
+        "RUF063",
+        "RUF064",
         "RUF1",
         "RUF10",
         "RUF100",
