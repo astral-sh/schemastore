@@ -14,6 +14,17 @@
         }
       ]
     },
+    "baseline": {
+      "description": "Path to the JSON file that records existing lint diagnostics for this project.\nRelative paths are resolved against the project root. Use `ty check --update-baseline`\nto create or update the file.\n\nDiagnostic baselines are in preview. The file format may change between ty releases.",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/RelativePathBuf"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "environment": {
       "description": "Configures the type checking environment.",
       "anyOf": [
@@ -232,6 +243,11 @@
           "description": "Print diagnostics as a JUnit-style XML report.",
           "type": "string",
           "const": "junit"
+        },
+        {
+          "description": "Print diagnostics as a [SARIF] report.\n\n[SARIF]: https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html",
+          "type": "string",
+          "const": "sarif"
         }
       ]
     },
